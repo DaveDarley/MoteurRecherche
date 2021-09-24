@@ -1,0 +1,17 @@
+#sizeInput{
+    height:35px;
+    width:550px;
+}
+
+.pos{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.displayResult{
+    margin-top:20px;
+    margin-bottom:20px;
+    display:block;
+}
+

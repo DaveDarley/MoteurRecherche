@@ -1,0 +1,19 @@
+{
+  "name": "devoir4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-snowball": "^0.4.0",
+    "stemmer": "^1.0.5",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.1"
+  }
+}
