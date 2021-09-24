@@ -9,15 +9,11 @@ Frequence d'un mot : nb de fois que le mot apparait dans le doc / nb de  mots du
 
 
 var stopWords = ["i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself", "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself", "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these", "those", "am", "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "having", "do", "does", "did", "doing", "a", "an", "the", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", "below", "to", "from", "up", "down", "in", "out", "on", "off", "over", "under", "again", "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both", "each", "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so", "than", "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"] ;
-// French StopWords
-//var stopWords = ["a","à","â","abord","afin","ah","ai","aie","ainsi","allaient","allo","allô","allons","après","assez","attendu","au","aucun","aucune","aujourd","aujourd\u0027hui","auquel","aura","auront","aussi","autre","autres","aux","auxquelles","auxquels","avaient","avais","avait","avant","avec","avoir","ayant","b","bah","beaucoup","bien","bigre","boum","bravo","brrr","c","ça","car","ce","ceci","cela","celle","celle-ci","celle-là","celles","celles-ci","celles-là","celui","celui-ci","celui-là","cent","cependant","certain","certaine","certaines","certains","certes","ces","cet","cette","ceux","ceux-ci","ceux-là","chacun","chaque","cher","chère","chères","chers","chez","chiche","chut","ci","cinq","cinquantaine","cinquante","cinquantième","cinquième","clac","clic","combien","comme","comment","compris","concernant","contre","couic","crac","d","da","dans","de","debout","dedans","dehors","delà","depuis","derrière","des","dès","désormais","desquelles","desquels","dessous","dessus","deux","deuxième","deuxièmement","devant","devers","devra","différent","différente","différentes","différents","dire","divers","diverse","diverses","dix","dix-huit","dixième","dix-neuf","dix-sept","doit","doivent","donc","dont","douze","douzième","dring","du","duquel","durant","e","effet","eh","elle","elle-même","elles","elles-mêmes","en","encore","entre","envers","environ","es","ès","est","et","etant","étaient","étais","était","étant","etc","été","etre","être","eu","euh","eux","eux-mêmes","excepté","f","façon","fais","faisaient","faisant","fait","feront","fi","flac","floc","font","g","gens","h","ha","hé","hein","hélas","hem","hep","hi","ho","holà","hop","hormis","hors","hou","houp","hue","hui","huit","huitième","hum","hurrah","i","il","ils","importe","j","je","jusqu","jusque","k","l","la","là","laquelle","las","le","lequel","les","lès","lesquelles","lesquels","leur","leurs","longtemps","lorsque","lui","lui-même","m","ma","maint","mais","malgré","me","même","mêmes","merci","mes","mien","mienne","miennes","miens","mille","mince","moi","moi-même","moins","mon","moyennant","n","na","ne","néanmoins","neuf","neuvième","ni","nombreuses","nombreux","non","nos","notre","nôtre","nôtres","nous","nous-mêmes","nul","o","o|","ô","oh","ohé","olé","ollé","on","ont","onze","onzième","ore","ou","où","ouf","ouias","oust","ouste","outre","p","paf","pan","par","parmi","partant","particulier","particulière","particulièrement","pas","passé","pendant","personne","peu","peut","peuvent","peux","pff","pfft","pfut","pif","plein","plouf","plus","plusieurs","plutôt","pouah","pour","pourquoi","premier","première","premièrement","près","proche","psitt","puisque","q","qu","quand","quant","quanta","quant-à-soi","quarante","quatorze","quatre","quatre-vingt","quatrième","quatrièmement","que","quel","quelconque","quelle","quelles","quelque","quelques","quelqu\u0027un","quels","qui","quiconque","quinze","quoi","quoique","r","revoici","revoilà","rien","s","sa","sacrebleu","sans","sapristi","sauf","se","seize","selon","sept","septième","sera","seront","ses","si","sien","sienne","siennes","siens","sinon","six","sixième","soi","soi-même","soit","soixante","son","sont","sous","stop","suis","suivant","sur","surtout","t","ta","tac","tant","te","té","tel","telle","tellement","telles","tels","tenant","tes","tic","tien","tienne","tiennes","tiens","toc","toi","toi-même","ton","touchant","toujours","tous","tout","toute","toutes","treize","trente","très","trois","troisième","troisièmement","trop","tsoin","tsouin","tu","u","un","une","unes","uns","v","va","vais","vas","vé","vers","via","vif","vifs","vingt","vivat","vive","vives","vlan","voici","voilà","vont","vos","votre","vôtre","vôtres","vous","vous-mêmes","vu","w","x","y","z","zut","alors","aucuns","bon","devrait","dos","droite","début","essai","faites","fois","force","haut","ici","juste","maintenant","mine","mot","nommés","nouveaux","parce","parole","personnes","pièce","plupart","seulement","soyez","sujet","tandis","valeur","voie","voient","état","étions"];
 
-//Reponse question 1
 var myJson = {"doc1":{},"doc2":{},"doc3":{},"doc4":{},"doc5":{}}
 
 var jsonUserQuest = {};
 
-//Reponse question 2 
 var jsonSimil = {};
 
 
@@ -206,7 +202,7 @@ var porterStemmingAlgo = (function(){ // Porter Stemming algorithm trouve sur in
 var  allText = new Array();
 
 
-function getTheDocs(){      /* Fonction trouve surinternet */
+function getTheDocs(){      /* Fonction trouve sur internet */
     const xhr = new XMLHttpRequest();
                 
     xhr.onreadystatechange = function(){
@@ -244,46 +240,25 @@ function readTextFile(texte)
     
     for(var l =0;l<interTable.length; l++){
         
-           var allWords = [];
+        var allWords = [];
+        var newTab = interTable[l].split(' ');
 
-           var newTab = interTable[l].split(' ');
-
-           for(var k = 0; k<newTab.length; k++){ // j'enleve les stopwords
-                if(stopWords.includes(newTab[k])){
-                    newTab[k] = '';
-                }
-
-           }
- 
-   
-               for(var j = 0; j<newTab.length; j++){
-                   if(newTab[j]!=''){
-                    newTab[j] = porterStemmingAlgo(newTab[j]) ; //j'effectue le stemming
-                    allWords.push(newTab[j]);
-                   }
-               }
-   
-           
+        for(var k = 0; k<newTab.length; k++){ // j'enleve les stopwords
+            if(stopWords.includes(newTab[k])){
+                newTab[k] = '';
+            }
+        }
 
 
-        
-
+        for(var j = 0; j<newTab.length; j++){
+            if(newTab[j]!=''){
+            newTab[j] = porterStemmingAlgo(newTab[j]) ; //j'effectue le stemming
+            allWords.push(newTab[j]);
+            }
+        }
         saveIndex(allWords);
-    
+    }
 }
-
-        
-}
-
-
-
- 
-
-// test 
-//var snowball = require('node-snowball');
-
-
-
 
 function getOccurrence(array, value) {
     var count = 0;
@@ -291,19 +266,14 @@ function getOccurrence(array, value) {
     return count;
 }
 
+
 function saveIndex(tab){
     allText.push(tab);
     var nbDocs = 5;      // Ne jamais oublier d'enlever ca!!
 
-   
-
     if(allText.length == nbDocs){
 
         console.log(allText);
-
-       
-
-        
 
         for(var i = 0; i<allText.length; i++){
             for(var j = 0; j<allText[i].length; j++){
@@ -319,21 +289,14 @@ function saveIndex(tab){
                         if(allText[k].includes(allText[i][j])){nbDocsWithWords++;}
                     
                     }
-                    
-
                     // nbDocsWithWords jamais car tjrs au moins un document avec le mots;
                     var poids = frequency  * Math.log(nbDocs/nbDocsWithWords)
-
-                    
 
                     // Remplisage du Json:
 
                     switch(i) {
                         case 0:
-
                             myJson.doc1[allText[i][j]] = poids
-                        
-
                             break;
                         case 1:
                             myJson.doc2[allText[i][j]] = poids
@@ -369,40 +332,30 @@ function saveIndex(tab){
 
 function findSearch(){
 
-
-
+  // On recupere la requete entre par l'utilisateur  
   var userQuest = (document.getElementById('sizeInput').value).split(' ');
    
-   // On enleve stopWord et et on stemming ca;
+   // On enleve stopWord s'il y en a et et on stemming la requete;
 
    for(var i = 0; i<userQuest.length; i++){
         if(stopWords.includes(userQuest[i])){
-           userQuest[i] = '';
+            userQuest[i] = '';
         }
-
-        //userQuest[i] = snowball.stemword(userQuest[i], 'french') // J'essaie l'anglais en bas
-
         userQuest[i] = porterStemmingAlgo(userQuest[i]) 
     }
-
-
 
     for(var i = 0; i<userQuest.length; i++){
         if(userQuest[i] != ''){
             // Frequence du mot dans la requete
            var frequence = getOccurrence(userQuest,userQuest[i]);
 
-           
-
            // nbDocs / nb documents qui a le mots
            var nbDocsAvecMots = 0;
 
            // On gere le cas ou le mot est un doc en lower ou upper case mais aussi si le mot est pareil!!!!
            for(var j = 0; j<allText.length; j++){   
-               
               if(allText[j].includes(userQuest[i].toString().toLowerCase()) || allText[j].includes(userQuest[i].toString().toUpperCase()) || allText[j].includes(userQuest[i])){
                   nbDocsAvecMots++;} 
-
            }
            console.log("nbDocsWithWords: "+nbDocsAvecMots); //Test
 
@@ -412,25 +365,16 @@ function findSearch(){
 
            if(nbDocsAvecMots == 0){weight = 0;}
 
-           
-
-           jsonUserQuest[userQuest[i]] = weight;
-
-
-
-
-           
-}
+           jsonUserQuest[userQuest[i]] = weight;         
+        }
 
     }
 
+    console.log('-----------jsonUserQuest---------');
+    console.log(jsonUserQuest);
+    console.log('-----------FinjsonUserQuest---------');
 
-
-console.log('-----------jsonUserQuest---------');
-console.log(jsonUserQuest);
-console.log('-----------FinjsonUserQuest---------');
-
-calculSimilarities();
+    calculSimilarities();
 
 }
 
@@ -480,14 +424,11 @@ function lengthOfDoc(obj){
 }
 
 
-// Peut etre probleme ici!!!
+
 function cosine2Vectors(obj1,obj2){
     // on multiplie les poids des properties communs aux deux objets
     var result = 0;
     for(var p in obj2){
-
-
-
         if(obj1.hasOwnProperty(p) && obj2.hasOwnProperty(p) ){
            result += obj1[p]*obj2[p];
         }
